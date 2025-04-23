@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+h1 { text-align: center; }
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.tab-buttons button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  background: #eaeaea;
+  cursor: pointer;
+}
+.tab-buttons button.active {
+  background: #fff;
+  border-bottom: 3px solid #007bff;
+  font-weight: bold;
+}
+.tab-content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+}
+label { display: block; margin-top: 1em; }
+input, select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.2em;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+button {
+  margin-top: 1em;
+  background: #007bff;
+  color: #fff;
+  border-radius: 3px;
+}
+.result {
+  margin-top: 1em;
+  background: #f8f8fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 1.05em;
+}

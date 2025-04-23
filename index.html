@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>手取り年収計算機（簡易・正確タブ切替）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>手取り年収計算機</h1>
+  <div class="tab-buttons">
+    <button id="tabSimple" class="active" onclick="showTab('simple')">簡易版</button>
+    <button id="tabAccurate" onclick="showTab('accurate')">正確版</button>
+  </div>
+  <div id="simpleForm" class="tab-content">
+    <h2>簡易版</h2>
+    <label>月給（円）<input type="number" id="s_monthly" min="0" /></label>
+    <label>年間ボーナス（円）<input type="number" id="s_bonus" min="0" /></label>
+    <label>年齢<input type="number" id="s_age" min="0" /></label>
+    <button onclick="calcSimple()">計算する</button>
+    <div id="s_result" class="result"></div>
+  </div>
+  <div id="accurateForm" class="tab-content" style="display:none;">
+    <h2>正確版</h2>
+    <label>月給（円）<input type="number" id="a_monthly" min="0" /></label>
+    <label>年間ボーナス（円）<input type="number" id="a_bonus" min="0" /></label>
+    <label>年齢<input type="number" id="a_age" min="0" /></label>
+    <label>扶養者の年齢（最大5人）</label>
+    <div id="a_fuyoContainer">
+      <input type="number" class="a_fuyoAge" min="0" placeholder="例：18"/>
+    </div>
+    <button onclick="addFuyo()">+ 扶養者を追加</button>
+    <label>居住地（都道府県）<select id="a_pref">
+      <option value="default">選択してください</option>
+      <option value="東京">東京</option>
+      <option value="大阪">大阪</option>
+      <option value="北海道">北海道</option>
+      <option value="福岡">福岡</option>
+    </select></label>
+    <button onclick="calcAccurate()">計算する</button>
+    <div id="a_result" class="result"></div>
+  </div>
+  <script src="insurance.js"></script>
+  <script src="calc.js"></script>
+</body>
+</html>

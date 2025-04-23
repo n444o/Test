@@ -5,32 +5,48 @@ body {
   max-width: 700px;
   margin: auto;
 }
-h1 { text-align: center; }
+
+h1 {
+  text-align: center;
+}
+
 .tab-buttons {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
+
 .tab-buttons button {
-  padding: 0.5rem 2rem;
+  flex: 1 1 40%;
+  padding: 0.7rem 1rem;
   font-size: 1rem;
-  border: none;
-  border-bottom: 2px solid #007bff;
-  background: #eaeaea;
+  background-color: #dce6f7;
+  color: #333;
+  border: 1px solid #007bff;
   cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  transition: background-color 0.3s;
 }
+
 .tab-buttons button.active {
-  background: #fff;
-  border-bottom: 3px solid #007bff;
-  font-weight: bold;
+  background-color: #007bff;
+  color: white;
 }
+
 .tab-content {
   background: #fff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.06);
 }
-label { display: block; margin-top: 1em; }
+
+label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
 input, select {
   width: 100%;
   padding: 0.5em;
@@ -38,12 +54,19 @@ input, select {
   border-radius: 3px;
   border: 1px solid #ccc;
 }
+
 button {
   margin-top: 1em;
+  padding: 0.7em;
+  width: 100%;
   background: #007bff;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
 }
+
 .result {
   margin-top: 1em;
   background: #f8f8fa;
@@ -51,4 +74,21 @@ button {
   border-radius: 5px;
   padding: 1em;
   font-size: 1.05em;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .tab-buttons button {
+    font-size: 0.9rem;
+    flex: 1 1 100%;
+    margin-bottom: 0.3rem;
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
 }

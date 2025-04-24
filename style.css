@@ -8,37 +8,41 @@ body {
 
 h1 {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 .tab-buttons {
   display: flex;
   justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
   margin-bottom: 1rem;
-  flex-wrap: wrap;
 }
 
 .tab-buttons button {
-  flex: 1 1 40%;
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-  background-color: #dce6f7;
+  flex: 1;
+  background: #ffffff;
+  border: none;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   color: #333;
-  border: 1px solid #007bff;
-  cursor: pointer;
-  border-radius: 5px 5px 0 0;
-  transition: background-color 0.3s;
 }
 
-.tab-buttons button.active {
-  background-color: #007bff;
-  color: white;
+.tab-buttons .active {
+  background-color: #dddddd;
+  color: #007aff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .tab-content {
   background: #fff;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+  margin-top: 1rem;
 }
 
 label {
@@ -82,7 +86,7 @@ button {
   }
 
   .tab-buttons button {
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex: 1 1 100%;
     margin-bottom: 0.3rem;
     border-radius: 4px;
@@ -91,4 +95,17 @@ button {
   h1 {
     font-size: 1.3rem;
   }
+}
+.tab-wrapper {
+  margin: 0;
+  padding: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-wrapper h1 {
+  margin: 0;
+  padding-bottom: 0.25rem;
 }

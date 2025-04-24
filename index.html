@@ -6,12 +6,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>手取り年収計算機</h1>
-  <div class="tab-buttons">
-    <button id="tabSimple" class="active" onclick="showTab('simple')">簡易版</button>
-    <button id="tabAccurate" onclick="showTab('accurate')">正確版</button>
+  <div class="tab-wrapper">
+    <h1>手取り年収計算機</h1>
   </div>
   <div id="simpleForm" class="tab-content">
+    <div class="tab-buttons">
+      <button id="tabSimple" class="active" onclick="showTab('simple')">簡易版</button>
+      <button id="tabAccurate" onclick="showTab('accurate')">正確版</button>
+    </div>
     <h2>簡易版</h2>
     <label>月給（円）<input type="number" id="s_monthly" min="0" /></label>
     <label>年間ボーナス（円）<input type="number" id="s_bonus" min="0" /></label>
@@ -20,6 +22,10 @@
     <div id="s_result" class="result"></div>
   </div>
   <div id="accurateForm" class="tab-content" style="display:none;">
+    <div class="tab-buttons">
+      <button id="tabSimple" onclick="showTab('simple')">簡易版</button>
+      <button id="tabAccurate" class="active" onclick="showTab('accurate')">正確版</button>
+    </div>
     <h2>正確版</h2>
     <label>月給（円）<input type="number" id="a_monthly" min="0" /></label>
     <label>年間ボーナス（円）<input type="number" id="a_bonus" min="0" /></label>

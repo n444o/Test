@@ -22,9 +22,9 @@ function addFuyo() {
 function calcSimple() {
   const monthly = parseInt(document.getElementById("s_monthly").value) || 0;
   const bonus = parseInt(document.getElementById("s_bonus").value) || 0;
-  const age = parseInt(document.getElementById("s_age").value) || 0;
-  if (monthly === 0 || age === 0) {
-    document.getElementById("s_result").textContent = "全項目を入力してください。";
+  const age = parseInt(document.getElementById("s_age").value);
+  if (monthly === 0) {
+    document.getElementById("s_result").textContent = "月給を入力してください。";
     return;
   }
   const annualIncome = monthly * 12 + bonus;
@@ -44,7 +44,7 @@ function calcSimple() {
   const health = annualIncome * FIXED_HEALTH_RATE;
   const pension = annualIncome * PENSION_RATE;
   const emp = annualIncome * EMPLOYMENT_RATE;
-  const care = (age >= 40 && age < 65) ? annualIncome * CARE_INSURANCE_RATE : 0;
+  const care = (age && age >= 40 && age < 65) ? annualIncome * CARE_INSURANCE_RATE : 0;
   const social = health + pension + emp + care;
 
   const totalTax = incomeTax + juminzei + social;
